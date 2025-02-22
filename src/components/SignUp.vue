@@ -6,7 +6,8 @@
     srcset=""
   />
 
-  <div class="form">
+  <fieldset class="form">
+    <legend>Register</legend>
     <label for="name"></label>
     <input type="text" placeholder="Name" id="name" v-model="name" />
 
@@ -30,7 +31,9 @@
     />
 
     <button type="submit" v-on:click="register">Register</button>
-  </div>
+  </fieldset>
+
+  <p>Already have an account? <router-link to="/login">Login</router-link></p>
 </template>
 
 <script lang="js">
@@ -101,31 +104,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.logo {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.form input {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.form button {
-  padding: 0.5rem;
-  border: none;
-  border-radius: 5px;
-  background-color: #f1356d;
-  color: white;
-  cursor: pointer;
-}
-</style>
+<style scoped></style>
