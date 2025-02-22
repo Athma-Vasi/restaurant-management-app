@@ -47,6 +47,15 @@ export default {
         }
     },
 
+    mounted() {
+        let user = localStorage.getItem('user');
+        if(user) {
+            this.$router.push({ name: 'Home' });
+        } else {
+            this.$router.push({ name: 'SignUp' });
+        }
+    },
+
     methods: {
         async register() {
             try {

@@ -5,5 +5,12 @@
 <script>
 export default {
   name: "Home",
+
+  mounted() {
+    let user = localStorage.getItem("user");
+    if (!user) {
+      this.$router.push({ name: "SignUp" });
+    }
+  },
 };
 </script>
