@@ -1,8 +1,7 @@
 <template>
-  <h2>Hi Athma!</h2>
   <img
     class="logo"
-    src="../assets/restaurant-logo.png"
+    src="../assets/restaurant-logo-ai.jpg"
     alt="restaurant-logo"
     srcset=""
   />
@@ -30,7 +29,7 @@
       v-model="confirmPassword"
     />
 
-    <button type="submit" v-on:click="signUp">Register</button>
+    <button type="submit" v-on:click="register">Register</button>
   </div>
 </template>
 
@@ -49,26 +48,41 @@ export default {
     },
 
     methods: {
-        async signUp() {
+        async register() {
             try {
+                if(this.password !== this.confirmPassword) {
+                    alert('Passwords do not match');
+                    return;
+                }
+
+                if(this.name.length === 0 || this.email.length === 0 || this.password.length === 0) {
+                    alert('Please fill all the fields');
+                    return;
+                }
+
+                let uuid = crypto.randomUUID();
+
                 console.group('User Registration');
+                console.log({ uuid });
                 console.log('Name:', this.name);
                 console.log('Email:', this.email);
                 console.log('Password:', this.password)
                 console.log('Confirm Password:', this.confirmPassword);
                 console.groupEnd();
 
+
                 let result = await axios.post("http://localhost:3000/users", {
-                name: this.name,
-                email: this.email,
-                password: this.password
+                    id: uuid,
+                    name: this.name,
+                    email: this.email,
+                    password: this.password
                 })
 
                 console.log(result);
 
                 if(result.status === 201) {
-                    // this.$router.push('/login');
-                    alert('User registered successfully');
+                    localStorage.setItem('user', JSON.stringify(result.data));
+                    this.$router.push({ name: 'Home' });
                 }
             } catch (err) {
                 console.log(err);
@@ -79,6 +93,12 @@ export default {
 </script>
 
 <style scoped>
+.logo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
 .form {
   display: flex;
   flex-direction: column;
