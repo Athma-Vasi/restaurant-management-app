@@ -31,9 +31,9 @@
     />
 
     <button type="submit" v-on:click="register">Register</button>
-  </fieldset>
 
-  <p>Already have an account? <router-link to="/login">Login</router-link></p>
+    <p>Already have an account? <router-link to="/login">Login</router-link></p>
+  </fieldset>
 </template>
 
 <script lang="js">
