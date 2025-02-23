@@ -12,5 +12,43 @@
       "email": "janedoe@email.com",
       "password": "password123"
     }
+  ],
+
+  "restaurants": [
+    {
+      "id": "1",
+      "name": "The Acorn",
+      "location": "3995 Main St, Vancouver, BC V5V 3P3",
+      "phone": "(604) 566-9001",
+      "website": "https://www.theacornrestaurant.ca/"
+    },
+    {
+      "id": "2",
+      "name": "Heritage Garden",
+      "location": "3106 Cambie St, Vancouver, BC V5Z 2W2",
+      "phone": "(604) 876-8388",
+      "website": "https://www.heritagegardens.com/"
+    },
+    {
+      "id": "3",
+      "name": "The Naam",
+      "location": "2724 W 4th Ave, Vancouver, BC V6K 1R1",
+      "phone": "(604) 738-7151",
+      "website": "https://www.thenaam.com/"
+    },
+    {
+      "id": "4",
+      "name": "Chickpea",
+      "location": "4298 Main St, Vancouver, BC V5V 3P9",
+      "phone": "(604) 620-0602",
+      "website": "https://ilovechickpea.ca/"
+    },
+    {
+      "id": "5",
+      "name": "Virtuous Pie",
+      "location": "583 Main St, Vancouver, BC V6A 2V1",
+      "phone": "(604) 620-0060",
+      "website": "https://www.virtuouspie.com/"
+    }
   ]
 }

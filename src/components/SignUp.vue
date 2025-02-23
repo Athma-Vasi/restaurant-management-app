@@ -1,7 +1,7 @@
 <template>
   <img
     class="logo"
-    src="../assets/restaurant-logo-ai.jpg"
+    src="../assets/restaurant-logo.png"
     alt="restaurant-logo"
     srcset=""
   />
