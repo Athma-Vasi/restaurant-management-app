@@ -13,7 +13,6 @@
       "password": "password123"
     }
   ],
-
   "restaurants": [
     {
       "id": "1",
@@ -44,11 +43,11 @@
       "website": "https://ilovechickpea.ca/"
     },
     {
-      "id": "5",
-      "name": "Virtuous Pie",
+      "name": "Virtuous Pie ",
       "location": "583 Main St, Vancouver, BC V6A 2V1",
       "phone": "(604) 620-0060",
-      "website": "https://www.virtuouspie.com/"
+      "website": "https://www.virtuouspie.com/",
+      "id": "5"
     }
   ]
 }

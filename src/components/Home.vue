@@ -7,12 +7,14 @@
       <th>Location</th>
       <th>Phone</th>
       <th>Website</th>
+      <th>Update</th>
     </tr>
     <tr v-for="restaurant in restaurants" :key="restaurant.id">
       <td>{{ restaurant.name }}</td>
       <td>{{ restaurant.location }}</td>
       <td>{{ restaurant.phone }}</td>
       <td>{{ restaurant.website }}</td>
+      <td><router-link :to="`/update/${restaurant.id}`">✏️</router-link></td>
     </tr>
   </table>
 </template>

@@ -2,7 +2,7 @@
   <Header />
   <h1>Hello {{ name }}, Welcome to Add Restaurant Page</h1>
 
-  <form action="post">
+  <form action="">
     <fieldset class="form">
       <legend>Add Restaurant</legend>
 
@@ -25,6 +25,7 @@
 
 <script>
 import Header from "./Header.vue";
+import axios from "axios";
 
 export default {
   name: "Add",
@@ -58,7 +59,14 @@ export default {
         console.log("Website: ", this.restaurant.website);
         console.groupEnd();
 
-        let result = await axios.post("http://localhost:3000/restaurants", this.restaurant);
+        let uuid = crypto.randomUUID();
+        let result = await axios.post("http://localhost:3000/restaurants", {
+          id: uuid,
+          name: this.restaurant.name,
+          location: this.restaurant.location,
+          phone: this.restaurant.phone,
+          website: this.restaurant.website,
+        });
         console.log("Result: ", result);
 
         if (result.status === 201) {
