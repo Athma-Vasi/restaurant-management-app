@@ -7,6 +7,7 @@ This is a Vue 3 application built using Options API for managing restaurants. Th
     - Register
     - Add a new restaurant
     - Update restaurant details
+    - Prefill form fields with existing data
     - Logout
 
 
@@ -40,6 +41,7 @@ This is a Vue 3 application built using Options API for managing restaurants. Th
     - POST /register: Register a new user (send username, email, and password).
 
 ### Future Improvements
+    - Add dedicated backend
     - Add authentication using JWT tokens.
     - Implement proper validation and error handling.
     - Add more advanced features such as restaurant reviews, ratings, etc.
