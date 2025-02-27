@@ -3,7 +3,6 @@
 This is a Vue 3 application built using Options API for managing restaurants. The app communicates with a mock backend powered by <mark>json-server</mark>
 
 ## Features
-
     - Login
     - Register
     - Add a new restaurant
@@ -12,7 +11,6 @@ This is a Vue 3 application built using Options API for managing restaurants. Th
 
 
 ### Components
-
     - Login.vue
     - SignUp.vue
     - Add.vue
@@ -21,7 +19,6 @@ This is a Vue 3 application built using Options API for managing restaurants. Th
     - Home.vue
     
 ### Views
-
     - Home.vue
     - Login.vue
     - SignUp.vue
@@ -29,7 +26,6 @@ This is a Vue 3 application built using Options API for managing restaurants. Th
     - Update.vue
 
 ### Routes
-
     - /: Home
     - /login: Login
     - /register: SignUp
@@ -37,7 +33,6 @@ This is a Vue 3 application built using Options API for managing restaurants. Th
     - /update: Update
 
 ### Mock Api Endpoints
-
     - GET /restaurants: List all restaurants.
     - POST /restaurants: Add a new restaurant.
     - PUT /restaurants/:id: Update an existing restaurant.
@@ -45,12 +40,10 @@ This is a Vue 3 application built using Options API for managing restaurants. Th
     - POST /register: Register a new user (send username, email, and password).
 
 ### Future Improvements
-
     - Add authentication using JWT tokens.
     - Implement proper validation and error handling.
     - Add more advanced features such as restaurant reviews, ratings, etc.
 
 ### License
-
 This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
